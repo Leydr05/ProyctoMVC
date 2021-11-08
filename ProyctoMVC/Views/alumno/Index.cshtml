@@ -1,0 +1,44 @@
+﻿@model ProyctoMVC.Models.alumno
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h2>index</h2>
+<h2>Vista de Categorias</h2>
+
+<a class="btn btn-primary" href="@Url.Action("Insertar","alumno")">Nuevo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col">Nombre</th>
+            <th class="col">Apellido</th>
+            <th class="col">Sexo</th>
+            <th class="col">Grado</th>
+            <th class="col">Seccion</th>
+            <th class="col">Direccion</th>
+            <th class="col">Telefono</th>
+            <th class="col">Correo</th>
+            <th class="col">Area</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var list in ViewBag.data)
+        {
+            <tr>
+                <td>@list.nom</td>
+                <td>@list.ape</td>
+                <td>@list.s</td>
+                <td>@list.gra</td>
+                <td>@list.se</td>
+                <td>@list.dir</td>
+                <td>@list.tel</td>
+                <td>@list.corEle</td>
+                <td>@list.areaOcu</td>
+                <td><a href="@Url.Action("modificar",new {cod=list.idAlu})" class="glyphicon glyphicon-edit">Modificar</a></td>
+                <td><a href="@Url.Action("eliminar",new { cod=list.idAlu})" class="glyphicon glyphicon-trash">Eliminar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

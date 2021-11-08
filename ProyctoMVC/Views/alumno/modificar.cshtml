@@ -1,0 +1,56 @@
+﻿@model ProyctoMVC.Models.alumno
+
+@{
+    ViewBag.Title = "modificar";
+}
+
+<h2>modificar</h2>
+
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(model => model.idAlu, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Descripcion</label>
+        @Html.TextBoxFor(model => model.nom, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.ape, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.s, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.gra, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.se, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.dir, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.tel, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.corEle, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Publico Dirigido</label>
+        @Html.TextBoxFor(model => model.areaOcu, new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Insertar</button>
+}

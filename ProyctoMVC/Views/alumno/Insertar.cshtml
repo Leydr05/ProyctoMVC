@@ -1,0 +1,61 @@
+﻿@model ProyctoMVC.Models.alumno
+
+@{
+    /**/
+
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Insertar";
+}
+
+<h2>Insertar</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        <label>Codigo</label>
+        @Html.TextBoxFor(model => model.idAlu, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(model => model.nom, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Apellido</label>
+        @Html.TextBoxFor(model => model.ape, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Sexo</label>
+        @Html.TextBoxFor(model => model.s, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Grado</label>
+        @Html.TextBoxFor(model => model.gra, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Seccion</label>
+        @Html.TextBoxFor(model => model.se, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Direccion</label>
+        @Html.TextBoxFor(model => model.dir, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        @Html.TextBoxFor(model => model.tel, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Correo Electronico</label>
+        @Html.TextBoxFor(model => model.corEle, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Area Ocupacional</label>
+        @Html.TextBoxFor(model => model.areaOcu, new { @class = "form-control" })
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Insertar</button>
+}
